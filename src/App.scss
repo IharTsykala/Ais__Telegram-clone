@@ -1,4 +1,10 @@
 $lightBackground: #fff;
+$middleBackground: #f0f0f0;
+
+$littlePadding: 5%;
+$middlePadding: 10%;
+
+$lightColor: #9b9b9b;
 
 * {
   margin: 0;
@@ -25,15 +31,40 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: 30% 1fr;
+  @media (max-width: 1600px) {
+    grid-template-columns: 400px 1fr;
+  }
 }
 
 .list-dialog-block {
-  //background-color: cornflowerblue;
+  display: grid;
+  grid-template-rows: $littlePadding 1fr;
+  width: 100%;
+  background-color: $lightBackground;
+  .list-dialog-block_header {
+    display: grid;
+    grid-template-columns: $middlePadding 1fr;
+    justify-items: center;
+    align-items: center;
+    color: $lightColor;
+    .menu-icon {
+      cursor: pointer;
+    }
+    .search-input {
+      background-color: $middleBackground;
+      border-radius: 5px;
+      width: 98%;
+      padding-left: $littlePadding;
+      justify-self: start;
+    }
+  }
 }
 
 .window-dialog-block {
   background-image:url('./assets/img/backgrounForTelegram.jpg');
-  background-size:cover
+  background-size:cover;
+  //display: grid;
+  //grid-template-rows: $headerHeight 1fr;
 }
 
 
