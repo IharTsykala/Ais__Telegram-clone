@@ -9,6 +9,7 @@ import cardItemSaga from "./Redux/store/CardItem/CardItem.sagas"
 import descriptionItemSaga from "./Redux/store/DescriptionItem/DescriptionItem.sagas"
 import ListItems from "./Components/ListItems/ListItems"
 import DescriptionItem from "./Components/DescriptionItem/DescriptionItem"
+import MessengerPage from "./Pages/MessengerPage/MessengerPage"
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -25,8 +26,9 @@ sagaMiddleware.run(descriptionItemSaga)
 const App: React.FC = () => (
   <Provider store={store}>
     <div className={"wrapper"}>
-      <ListItems />
-      <DescriptionItem />
+      <main className={"main"}>
+        <MessengerPage />
+      </main>
     </div>
   </Provider>
 )
