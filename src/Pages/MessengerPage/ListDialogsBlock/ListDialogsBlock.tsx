@@ -1,6 +1,7 @@
 import React from "react"
 import MenuIcon from "@material-ui/icons/Menu"
 import { InputBase } from "@material-ui/core"
+import UserCard from "../../../Components/UserCard/UserCard"
 
 const arrayFriends = [
   { id: 1, name: "Sasha1" },
@@ -27,7 +28,7 @@ const ListDialogsBlock: React.FunctionComponent<ListDialogsBlockProps> = () => {
         <InputBase placeholder={"Search"} className={"search-input"} />
       </div>
       <div className={"list-dialog-block_main"}>
-        {arrayFriends.length && arrayFriends.map((item: any) => <div></div>)}
+        {arrayFriends.length && arrayFriends.map((item: any) => <UserCard />)}
       </div>
     </div>
   )
