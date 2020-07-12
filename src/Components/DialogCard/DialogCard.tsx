@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
-import Avatar from "@material-ui/core/Avatar"
+import { Avatar, Typography } from "@material-ui/core"
 import patternAvatar from "../../assets/img/pattern-avatar.jpg"
+import { UserInterface } from "../../Redux/InterfacesEntity/UserInterface"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -19,17 +20,22 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 type UserCardProps = {
+  user: UserInterface,
   // dispatch: any,
 }
 
-const UserCard: React.FunctionComponent<UserCardProps> = () => {
+const DialogCard: React.FunctionComponent<UserCardProps> = ({ user }) => {
   const classes = useStyles()
   return (
     <div className={`user-card ${classes.root}`}>
       <div>
         <Avatar alt="avatar" src={patternAvatar} className={classes.avatar} />
       </div>
-      <div></div>
+      <div>
+        <Typography
+          variant={"subtitle1"}
+        >{`${user.name}${user.id}`}</Typography>
+      </div>
     </div>
   )
 }
@@ -38,4 +44,4 @@ const UserCard: React.FunctionComponent<UserCardProps> = () => {
 //   searchStringState: state.pagination.searchString,
 // })
 
-export default UserCard
+export default DialogCard
