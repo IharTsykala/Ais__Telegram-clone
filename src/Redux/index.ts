@@ -1,8 +1,10 @@
 import { combineReducers } from "redux"
-import { cardItemReducer } from "./store/CardItem/CardItem.reduser"
-import { descriptionItemReducer } from "./store/DescriptionItem/DescriptionItem.reduser"
+import { dialogReducer } from "./store/Dialog/Dialog.reduser"
+import { UserReducer } from "./store/User/User.reduser"
+import { MessageReducer } from "./store/Message/User.reduser"
 
 export default combineReducers({
-  cardItem: cardItemReducer,
-  descriptionItem: descriptionItemReducer,
+  dialog: dialogReducer,
+  user: UserReducer,
+  message: MessageReducer,
 })

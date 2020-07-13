@@ -3,12 +3,22 @@ import MenuIcon from "@material-ui/icons/Menu"
 import { InputBase } from "@material-ui/core"
 import DialogCard from "../../../Components/DialogCard/DialogCard"
 import { UserInterface } from "../../../Redux/InterfacesEntity/User.Interface"
+import { MessageInterface } from "../../../Redux/InterfacesEntity/Message.Interface"
+import { connect } from "react-redux"
 
 type ListDialogsBlockProps = {
-  // dispatch: any,
+  idCurrentUser: number,
+  arrayFriends: UserInterface[],
+  arrayMessages: MessageInterface[][],
+  dispatch: any,
 }
 
-const ListDialogsBlock: React.FunctionComponent<ListDialogsBlockProps> = () => {
+const ListDialogsBlock: React.FunctionComponent<ListDialogsBlockProps> = ({
+  idCurrentUser,
+  arrayFriends,
+  arrayMessages,
+  dispatch,
+}) => {
   return (
     <div className={"list-dialog-block"}>
       <div className={"list-dialog-block_header"}>
@@ -22,6 +32,7 @@ const ListDialogsBlock: React.FunctionComponent<ListDialogsBlockProps> = () => {
               key={item.id}
               user={item}
               messages={arrayMessages[index]}
+              dispatch={dispatch}
             />
           ))}
       </div>
@@ -29,8 +40,10 @@ const ListDialogsBlock: React.FunctionComponent<ListDialogsBlockProps> = () => {
   )
 }
 
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
+const mapStateToProps = (state: any) => ({
+  idCurrentUser: state.dialog.idCurrentUser,
+  arrayFriends: state.user.arrayFriends,
+  arrayMessages: state.message.arrayMessages,
+})
 
-export default ListDialogsBlock
+export default connect(mapStateToProps)(ListDialogsBlock)

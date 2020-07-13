@@ -4,6 +4,7 @@ import { Avatar, Typography } from "@material-ui/core"
 import patternAvatar from "../../assets/img/pattern-avatar.jpg"
 import { UserInterface } from "../../Redux/InterfacesEntity/User.Interface"
 import { MessageInterface } from "../../Redux/InterfacesEntity/Message.Interface"
+import { setCurrentDialog } from "../../Redux/store/Dialog/Dialog.actions"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -23,17 +24,21 @@ const useStyles = makeStyles((theme: Theme) =>
 type UserCardProps = {
   user: UserInterface,
   messages: MessageInterface[],
-  // dispatch: any,
+  dispatch: any,
 }
 
 const DialogCard: React.FunctionComponent<UserCardProps> = ({
   user,
   messages,
+  dispatch,
 }) => {
   const classes = useStyles()
   console.log(messages)
   return (
-    <div className={`user-card ${classes.root}`}>
+    <div
+      className={`user-card ${classes.root}`}
+      onClick={() => dispatch(setCurrentDialog(user.id))}
+    >
       <div className={"user-card__avatar-container"}>
         <Avatar alt="avatar" src={patternAvatar} className={classes.avatar} />
       </div>
@@ -59,9 +64,5 @@ const DialogCard: React.FunctionComponent<UserCardProps> = ({
     </div>
   )
 }
-
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
 
 export default DialogCard
