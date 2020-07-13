@@ -1,5 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
+import { Typography } from "@material-ui/core"
 
 type WindowDialogBlockProps = {
   idCurrentUser: number,
@@ -19,7 +20,9 @@ const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
         </>
       )) || (
         <div className={"window-dialog-block__empty-window"}>
-          Please select chat to start messaging
+          <Typography variant={"subtitle1"} className={"text-select-chat"}>
+            Please select chat to start messaging
+          </Typography>
         </div>
       )}
     </div>

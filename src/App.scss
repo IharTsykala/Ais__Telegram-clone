@@ -1,5 +1,6 @@
 $lightBackground: #fff;
 $middleBackground: #f0f0f0;
+$darkBackground: #5a5a5a;
 
 $littlePadding: 5%;
 $middlePadding: 10%;
@@ -110,7 +111,28 @@ body {
   //max-height: 100%;
   background-image:url('./assets/img/backgrounForTelegram.jpg');
   background-size:cover;
-
+  display: grid;
+  .window-dialog-block__empty-window {
+    height: 30px;
+    width: 300px;
+    border-radius: 15px;
+    display: grid;
+    justify-self: center;
+    text-align: center;
+    align-self: center;
+    //margin-top: 10%;
+    background-color: $middleBackground;
+    //margin: 0 auto;
+    @media (max-width: 800px) {
+      width: 100%;
+      background-color: inherit;
+    }
+    .text-select-chat {
+      display: grid;
+      align-items: center;
+      color: $lightColor;
+    }
+  }
   //display: grid;
   //grid-template-rows: $headerHeight 1fr;
 }
