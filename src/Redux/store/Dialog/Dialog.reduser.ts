@@ -6,7 +6,7 @@ export interface State {
 }
 
 const initialState: State = {
-  idCurrentUser: 1,
+  idCurrentUser: 0,
 }
 
 export const dialogReducer = (

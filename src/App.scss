@@ -69,6 +69,10 @@ body {
 .user-card {
   display: grid;
   grid-template-columns: 70px 1fr;
+  cursor: pointer;
+  &:hover {
+    background-color: $middleBackground;
+  }
   .user-card__avatar-container {
     margin: 0 10px;
     width: 70px;
@@ -95,6 +99,10 @@ body {
       overflow: hidden;
     }
   }
+}
+
+.user-card_current {
+  background-color: $middleBackground;
 }
 
 .window-dialog-block {

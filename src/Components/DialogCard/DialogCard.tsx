@@ -24,19 +24,25 @@ const useStyles = makeStyles((theme: Theme) =>
 type UserCardProps = {
   user: UserInterface,
   messages: MessageInterface[],
+  idCurrentUser: number,
   dispatch: any,
 }
 
 const DialogCard: React.FunctionComponent<UserCardProps> = ({
   user,
   messages,
+  idCurrentUser,
   dispatch,
 }) => {
   const classes = useStyles()
   console.log(messages)
   return (
     <div
-      className={`user-card ${classes.root}`}
+      className={
+        (idCurrentUser === user.id &&
+          `user-card ${classes.root} user-card_current`) ||
+        `user-card ${classes.root}`
+      }
       onClick={() => dispatch(setCurrentDialog(user.id))}
     >
       <div className={"user-card__avatar-container"}>

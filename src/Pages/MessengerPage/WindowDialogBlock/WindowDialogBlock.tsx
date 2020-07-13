@@ -1,22 +1,33 @@
 import React from "react"
+import { connect } from "react-redux"
 
 type WindowDialogBlockProps = {
-  // dispatch: any,
+  idCurrentUser: number,
+  dispatch: any,
 }
 
-const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = () => {
+const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
+  idCurrentUser,
+}) => {
   return (
     <div className={"window-dialog-block"}>
-      //will be window dialog here
-      <div className={"window-dialog-block__header"}></div>
-      <div className={"window-dialog-block__main"}></div>
-      <div className={"window-dialog-block__message-field"}></div>
+      {(idCurrentUser && (
+        <>
+          <div className={"window-dialog-block__header"}></div>
+          <div className={"window-dialog-block__main"}></div>
+          <div className={"window-dialog-block__message-field"}></div>
+        </>
+      )) || (
+        <div className={"window-dialog-block__empty-window"}>
+          Please select chat to start messaging
+        </div>
+      )}
     </div>
   )
 }
 
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
+const mapStateToProps = (state: any) => ({
+  idCurrentUser: state.dialog.idCurrentUser,
+})
 
-export default WindowDialogBlock
+export default connect(mapStateToProps)(WindowDialogBlock)

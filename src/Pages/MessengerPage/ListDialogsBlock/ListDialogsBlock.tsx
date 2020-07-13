@@ -32,6 +32,7 @@ const ListDialogsBlock: React.FunctionComponent<ListDialogsBlockProps> = ({
               key={item.id}
               user={item}
               messages={arrayMessages[index]}
+              idCurrentUser={idCurrentUser}
               dispatch={dispatch}
             />
           ))}
