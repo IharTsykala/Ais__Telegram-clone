@@ -2,7 +2,7 @@ import React from "react"
 import MenuIcon from "@material-ui/icons/Menu"
 import { InputBase } from "@material-ui/core"
 import DialogCard from "../../../Components/DialogCard/DialogCard"
-import { UserInterface } from "../../../Redux/InterfacesEntity/UserInterface"
+import { UserInterface } from "../../../Redux/InterfacesEntity/User.Interface"
 
 const arrayFriends = [
   { id: 1, name: "Sasha" },
@@ -27,27 +27,200 @@ const arrayFriends = [
   { id: 20, name: "Sasha" },
 ]
 
+const newDate = () => {
+  const newDate = new Date()
+  let meridiem = "AM"
+  let hours = newDate.getHours()
+  let minutes = newDate.getMinutes()
+  if (hours > 11) {
+    meridiem = "PM"
+    hours -= 12
+  }
+  if (minutes < 10) return `${hours}:0${minutes} ${meridiem}`
+  return `${hours}:${minutes} ${meridiem}`
+}
+
 const arrayMessages = [
-  [{ id: 1, text: "message", idDialog: 1, IdOwner: 1, data: new Date() }],
-  [{ id: 2, text: "message", idDialog: 2, IdOwner: 2, data: new Date() }],
-  [{ id: 3, text: "message", idDialog: 3, IdOwner: 3, data: new Date() }],
-  [{ id: 4, text: "message", idDialog: 4, IdOwner: 4, data: new Date() }],
-  [{ id: 5, text: "message", idDialog: 5, IdOwner: 5, data: new Date() }],
-  [{ id: 6, text: "message", idDialog: 6, IdOwner: 6, data: new Date() }],
-  [{ id: 7, text: "message", idDialog: 7, IdOwner: 7, data: new Date() }],
-  [{ id: 8, text: "message", idDialog: 8, IdOwner: 8, data: new Date() }],
-  [{ id: 9, text: "message", idDialog: 9, IdOwner: 9, data: new Date() }],
-  [{ id: 10, text: "message", idDialog: 10, IdOwner: 10, data: new Date() }],
-  [{ id: 11, text: "message", idDialog: 11, IdOwner: 11, data: new Date() }],
-  [{ id: 12, text: "message", idDialog: 12, IdOwner: 12, data: new Date() }],
-  [{ id: 13, text: "message", idDialog: 13, IdOwner: 13, data: new Date() }],
-  [{ id: 14, text: "message", idDialog: 14, IdOwner: 14, data: new Date() }],
-  [{ id: 15, text: "message", idDialog: 15, IdOwner: 15, data: new Date() }],
-  [{ id: 16, text: "message", idDialog: 16, IdOwner: 16, data: new Date() }],
-  [{ id: 17, text: "message", idDialog: 17, IdOwner: 17, data: new Date() }],
-  [{ id: 18, text: "message", idDialog: 18, IdOwner: 18, data: new Date() }],
-  [{ id: 19, text: "message", idDialog: 19, IdOwner: 19, data: new Date() }],
-  [{ id: 20, text: "message", idDialog: 20, IdOwner: 20, data: new Date() }],
+  [
+    {
+      id: 1,
+      text: "message",
+      idDialog: 1,
+      idOwner: 1,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 2,
+      text: "message",
+      idDialog: 2,
+      idOwner: 2,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 3,
+      text: "message",
+      idDialog: 3,
+      idOwner: 3,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 4,
+      text: "message",
+      idDialog: 4,
+      idOwner: 4,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 5,
+      text: "message",
+      idDialog: 5,
+      idOwner: 5,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 6,
+      text: "message",
+      idDialog: 6,
+      idOwner: 6,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 7,
+      text: "message",
+      idDialog: 7,
+      idOwner: 7,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 8,
+      text: "message",
+      idDialog: 8,
+      idOwner: 8,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 9,
+      text: "message",
+      idDialog: 9,
+      idOwner: 9,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 10,
+      text: "message",
+      idDialog: 10,
+      idOwner: 10,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 11,
+      text: "message",
+      idDialog: 11,
+      idOwner: 11,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 12,
+      text: "message",
+      idDialog: 12,
+      idOwner: 12,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 13,
+      text: "message",
+      idDialog: 13,
+      idOwner: 13,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 14,
+      text: "message",
+      idDialog: 14,
+      idOwner: 14,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 15,
+      text: "message",
+      idDialog: 15,
+      idOwner: 15,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 16,
+      text: "message",
+      idDialog: 16,
+      idOwner: 16,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 17,
+      text: "message",
+      idDialog: 17,
+      idOwner: 17,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 18,
+      text: "message",
+      idDialog: 18,
+      idOwner: 18,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 19,
+      text: "message",
+      idDialog: 19,
+      idOwner: 19,
+      createDate: newDate(),
+    },
+  ],
+  [
+    {
+      id: 20,
+      text: "message",
+      idDialog: 20,
+      idOwner: 20,
+      createDate: newDate(),
+    },
+  ],
 ]
 
 type ListDialogsBlockProps = {
@@ -63,11 +236,11 @@ const ListDialogsBlock: React.FunctionComponent<ListDialogsBlockProps> = () => {
       </div>
       <div className={"list-dialog-block_main"}>
         {arrayFriends.length &&
-          arrayFriends.map((item: UserInterface) => (
+          arrayFriends.map((item: UserInterface, index: number) => (
             <DialogCard
               key={item.id}
               user={item}
-              messages={arrayMessages[item.id]}
+              messages={arrayMessages[index]}
             />
           ))}
       </div>
