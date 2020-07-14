@@ -3,6 +3,9 @@ import { connect } from "react-redux"
 import { Typography } from "@material-ui/core"
 import { UserInterface } from "../../../Redux/InterfacesEntity/User.Interface"
 import { MessageInterface } from "../../../Redux/InterfacesEntity/Message.Interface"
+import SearchIcon from "@material-ui/icons/Search"
+import ChromeReaderModeIcon from "@material-ui/icons/ChromeReaderMode"
+import MoreVertIcon from "@material-ui/icons/MoreVert"
 
 type WindowDialogBlockProps = {
   idCurrentUser: number,
@@ -36,7 +39,11 @@ const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
                 2 members
               </Typography>
             </div>
-            <div className={"window-dialog-block__header-menu"}></div>
+            <div className={"window-dialog-block__header-menu"}>
+              <SearchIcon />
+              <ChromeReaderModeIcon />
+              <MoreVertIcon />
+            </div>
           </div>
           <div className={"window-dialog-block__main"}></div>
           <div className={"window-dialog-block__message-field"}></div>

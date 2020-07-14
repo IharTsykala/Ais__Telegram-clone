@@ -146,13 +146,26 @@ body {
     display: grid;
     grid-template-rows: $littlePadding 1fr $littlePadding;
     .window-dialog-block__header {
+      padding: 0 0 0 20px;
+      border-left: 1px solid $middleBackground;
+      border-bottom: 1px solid $middleBackground;
       @extend %messenger-page-header;
+      grid-template-columns: 1fr 120px;
       .window-dialog-block__header-information {
         .window-dialog-block__header-information-name {
           color: $darkColor;
         }
         .window-dialog-block__header-information-members {
 
+        }
+      }
+      .window-dialog-block__header-menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        svg {
+          cursor: pointer;
         }
       }
     }
