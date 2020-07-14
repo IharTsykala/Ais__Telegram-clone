@@ -6,6 +6,16 @@ $littlePadding: 5%;
 $middlePadding: 10%;
 
 $lightColor: #9b9b9b;
+$darkColor: #323232;
+
+%messenger-page-header {
+  display: grid;
+  //grid-template-columns: $middlePadding 1fr;
+  //justify-items: center;
+  //align-items: center;
+  color: $lightColor;
+  background-color: $lightBackground;
+}
 
 * {
   margin: 0;
@@ -42,13 +52,11 @@ body {
   grid-template-rows: $littlePadding 1fr;
   //max-width: 100vw;
   max-height: 100vh;
-  background-color: $lightBackground;
   .list-dialog-block_header {
-    display: grid;
+    @extend %messenger-page-header;
     grid-template-columns: $middlePadding 1fr;
     justify-items: center;
     align-items: center;
-    color: $lightColor;
     .menu-icon {
       cursor: pointer;
     }
@@ -112,7 +120,8 @@ body {
   background-image:url('./assets/img/backgrounForTelegram.jpg');
   background-size:cover;
   display: grid;
-  .window-dialog-block__empty-window {
+
+  .window-dialog-block__start-window {
     height: 30px;
     width: 300px;
     border-radius: 15px;
@@ -131,6 +140,27 @@ body {
       display: grid;
       align-items: center;
       color: $lightColor;
+    }
+  }
+  .window-dialog-block__current-dialog-information {
+    display: grid;
+    grid-template-rows: $littlePadding 1fr $littlePadding;
+    .window-dialog-block__header {
+      @extend %messenger-page-header;
+      .window-dialog-block__header-information {
+        .window-dialog-block__header-information-name {
+          color: $darkColor;
+        }
+        .window-dialog-block__header-information-members {
+
+        }
+      }
+    }
+    .window-dialog-block__main {
+
+    }
+    .window-dialog-block__message-field {
+      @extend %messenger-page-header;
     }
   }
   //display: grid;
