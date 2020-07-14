@@ -6,6 +6,7 @@ import { MessageInterface } from "../../../Redux/InterfacesEntity/Message.Interf
 import SearchIcon from "@material-ui/icons/Search"
 import ChromeReaderModeIcon from "@material-ui/icons/ChromeReaderMode"
 import MoreVertIcon from "@material-ui/icons/MoreVert"
+import MessageCard from "../../../Components/MessageCard/MessageCard"
 
 type WindowDialogBlockProps = {
   idCurrentUser: number,
@@ -20,6 +21,7 @@ const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
   arrayMessages,
   dispatch,
 }) => {
+  console.log(arrayMessages[idCurrentUser - 1])
   return (
     <div className={"window-dialog-block"}>
       {(idCurrentUser && (
@@ -30,7 +32,9 @@ const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
                 variant={"subtitle1"}
                 className={"window-dialog-block__header-information-name"}
               >
-                {`${arrayFriends[idCurrentUser].name}${arrayFriends[idCurrentUser].id}`}
+                {`${arrayFriends[idCurrentUser - 1].name}${
+                  arrayFriends[idCurrentUser - 1].id
+                }`}
               </Typography>
               <Typography
                 variant={"caption"}
@@ -45,7 +49,13 @@ const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
               <MoreVertIcon />
             </div>
           </div>
-          <div className={"window-dialog-block__main"}></div>
+          <div className={"window-dialog-block__main"}>
+            <MessageCard
+              idCurrentUser={idCurrentUser}
+              friend={arrayFriends[idCurrentUser - 1]}
+              messages={arrayMessages[idCurrentUser - 1]}
+            />
+          </div>
           <div className={"window-dialog-block__message-field"}></div>
         </div>
       )) || (

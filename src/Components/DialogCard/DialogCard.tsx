@@ -35,7 +35,6 @@ const DialogCard: React.FunctionComponent<UserCardProps> = ({
   dispatch,
 }) => {
   const classes = useStyles()
-  console.log(messages)
   return (
     <div
       className={
