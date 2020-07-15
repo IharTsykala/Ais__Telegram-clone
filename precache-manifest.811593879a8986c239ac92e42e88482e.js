@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ee4305d424ee1e77008958eabd9d06eb",
+    "revision": "838e92093a965f4db5c6e03eb0ea3244",
     "url": "/Ais__Telegram-clone/index.html"
   },
   {
-    "revision": "9909c22fce2c27f2df5f",
-    "url": "/Ais__Telegram-clone/static/css/main.efc50f3e.chunk.css"
+    "revision": "af93ac318f53199b3a01",
+    "url": "/Ais__Telegram-clone/static/css/main.70dc1183.chunk.css"
   },
   {
     "revision": "6f314318a2a3dacb1baf",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Ais__Telegram-clone/static/js/2.ea085158.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9909c22fce2c27f2df5f",
+    "revision": "af93ac318f53199b3a01",
     "url": "/Ais__Telegram-clone/static/js/main.5818a1d1.chunk.js"
   },
   {
