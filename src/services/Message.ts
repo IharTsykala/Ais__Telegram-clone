@@ -20,6 +20,13 @@ const arrayMessages = [
       idOwner: 1,
       createDate: newDate(),
     },
+    {
+      id: 21,
+      text: "message2",
+      idDialog: 1,
+      idOwner: 1,
+      createDate: newDate(),
+    },
   ],
   [
     {

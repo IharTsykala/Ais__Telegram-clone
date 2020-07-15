@@ -182,10 +182,11 @@ body {
 }
 
 .message-card {
-  display: inline-block;
+  display: block;
   min-width: 200px;
-  //width: 100%;
+  width: max-content;
   min-height: 50px;
+  height: max-content;
   border-radius: 10px;
   background-color: $lightBackground;
   text-align: left;

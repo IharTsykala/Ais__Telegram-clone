@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Typography } from "@material-ui/core"
 import { MessageInterface } from "../../Redux/InterfacesEntity/Message.Interface"
 import { UserInterface } from "../../Redux/InterfacesEntity/User.Interface"
@@ -15,9 +15,9 @@ const MessageCard: React.FunctionComponent<MessageCardProps> = ({
   friend,
   message,
 }) => {
-  console.log(idCurrentUser)
-  console.log(friend)
-  console.log(message)
+  // console.log(idCurrentUser)
+  // console.log(friend)
+  // console.log(message)
   return (
     <div className={"message-card"}>
       <div className={"message-card__header"}>
