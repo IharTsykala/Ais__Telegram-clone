@@ -1,12 +1,15 @@
 import React from "react"
 import { connect } from "react-redux"
-import { Typography } from "@material-ui/core"
+import { InputBase, Typography } from "@material-ui/core"
 import { UserInterface } from "../../../Redux/InterfacesEntity/User.Interface"
 import { MessageInterface } from "../../../Redux/InterfacesEntity/Message.Interface"
 import SearchIcon from "@material-ui/icons/Search"
 import ChromeReaderModeIcon from "@material-ui/icons/ChromeReaderMode"
 import MoreVertIcon from "@material-ui/icons/MoreVert"
 import MessageCard from "../../../Components/MessageCard/MessageCard"
+import AttachFileIcon from "@material-ui/icons/AttachFile"
+import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon"
+import MicNoneIcon from "@material-ui/icons/MicNone"
 
 type WindowDialogBlockProps = {
   idCurrentUser: number,
@@ -61,7 +64,21 @@ const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
                 />
               ))}
           </div>
-          <div className={"window-dialog-block__message-field"}></div>
+          <div className={"window-dialog-block__message-field"}>
+            <div className={"attach-file"}>
+              <AttachFileIcon />
+            </div>
+            <InputBase
+              placeholder={"Write a message..."}
+              className={"message-input"}
+            />
+            <div className={"smiles"}>
+              <InsertEmoticonIcon />
+            </div>
+            <div className={"void-message"}>
+              <MicNoneIcon />
+            </div>
+          </div>
         </div>
       )) || (
         <div className={"window-dialog-block__start-window"}>

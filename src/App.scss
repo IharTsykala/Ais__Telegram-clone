@@ -172,26 +172,34 @@ body {
     .window-dialog-block__main {
       overflow-x: hidden;
       overflow-y: auto;
+      .message-card {
+        display: block;
+        min-width: 200px;
+        width: max-content;
+        min-height: 50px;
+        height: max-content;
+        border-radius: 10px;
+        background-color: $lightBackground;
+        text-align: left;
+        padding: 10px;
+        margin: 20px;
+      }
     }
     .window-dialog-block__message-field {
       @extend %messenger-page-header;
+      grid-template-columns: 50px 1fr repeat(2, 50px);
+      justify-items: center;
+      align-items: center;
+      .message-input {
+        justify-self: start;
+        //padding: 0 $littlePadding;
+      }
+      svg{
+        cursor: pointer;
+      }
     }
   }
   //display: grid;
   //grid-template-rows: $headerHeight 1fr;
 }
-
-.message-card {
-  display: block;
-  min-width: 200px;
-  width: max-content;
-  min-height: 50px;
-  height: max-content;
-  border-radius: 10px;
-  background-color: $lightBackground;
-  text-align: left;
-  padding: 10px;
-  margin: 20px;
-}
-
 
