@@ -8,6 +8,8 @@ $middlePadding: 10%;
 $lightColor: #9b9b9b;
 $darkColor: #323232;
 
+$headerHeight: 50px;
+
 %messenger-page-header {
   display: grid;
   color: $lightColor;
@@ -46,7 +48,7 @@ body {
 
 .list-dialog-block {
   display: grid;
-  grid-template-rows: $littlePadding 1fr;
+  grid-template-rows: $headerHeight 1fr;
   max-height: 100vh;
   .list-dialog-block_header {
     @extend %messenger-page-header;
@@ -112,7 +114,6 @@ body {
   background-image:url('./assets/img/backgrounForTelegram.jpg');
   background-size:cover;
   display: grid;
-
   .window-dialog-block__start-window {
     height: 30px;
     width: 300px;
@@ -134,7 +135,7 @@ body {
   }
   .window-dialog-block__current-dialog-information {
     display: grid;
-    grid-template-rows: $littlePadding 1fr $littlePadding;
+    grid-template-rows: $headerHeight 1fr $headerHeight;
     .window-dialog-block__header {
       padding: 0 0 0 20px;
       border-left: 1px solid $middleBackground;
@@ -142,6 +143,7 @@ body {
       @extend %messenger-page-header;
       grid-template-columns: 1fr 120px;
       .window-dialog-block__header-information {
+        align-self: center;
         .window-dialog-block__header-information-name {
           color: $darkColor;
         }
@@ -179,6 +181,8 @@ body {
       grid-template-columns: 50px 1fr repeat(2, 50px);
       justify-items: center;
       align-items: center;
+      border-left: 1px solid $middleBackground;
+      border-top: 1px solid $middleBackground;
       .message-input {
         width: 100%;
         justify-self: start;
