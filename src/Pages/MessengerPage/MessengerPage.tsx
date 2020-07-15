@@ -2,11 +2,7 @@ import React from "react"
 import ListDialogsBlock from "./ListDialogsBlock/ListDialogsBlock"
 import WindowDialogBlock from "./WindowDialogBlock/WindowDialogBlock"
 
-type MessengerPageProps = {
-  // dispatch: any,
-}
-
-const MessengerPage: React.FunctionComponent<MessengerPageProps> = () => {
+const MessengerPage: React.FunctionComponent = () => {
   return (
     <div className={"messenger-page"}>
       <ListDialogsBlock />
@@ -14,9 +10,5 @@ const MessengerPage: React.FunctionComponent<MessengerPageProps> = () => {
     </div>
   )
 }
-
-// const mapStateToProps = (state: any) => ({
-//   searchStringState: state.pagination.searchString,
-// })
 
 export default MessengerPage
