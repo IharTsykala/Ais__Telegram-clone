@@ -21,7 +21,7 @@ const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
   arrayMessages,
   dispatch,
 }) => {
-  console.log(arrayMessages[idCurrentUser - 1])
+  // console.log(arrayMessages)
   return (
     <div className={"window-dialog-block"}>
       {(idCurrentUser && (
@@ -50,11 +50,16 @@ const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
             </div>
           </div>
           <div className={"window-dialog-block__main"}>
-            <MessageCard
-              idCurrentUser={idCurrentUser}
-              friend={arrayFriends[idCurrentUser - 1]}
-              messages={arrayMessages[idCurrentUser - 1]}
-            />
+            {arrayMessages &&
+              arrayMessages[idCurrentUser - 1].length &&
+              arrayMessages[idCurrentUser - 1].map((item: MessageInterface) => (
+                <MessageCard
+                  key={idCurrentUser}
+                  idCurrentUser={idCurrentUser}
+                  friend={arrayFriends[idCurrentUser - 1]}
+                  message={item}
+                />
+              ))}
           </div>
           <div className={"window-dialog-block__message-field"}></div>
         </div>
