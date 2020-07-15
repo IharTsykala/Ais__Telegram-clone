@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Ais__Telegram-clone/static/css/main.efc50f3e.chunk.css",
+    "main.js": "/Ais__Telegram-clone/static/js/main.5818a1d1.chunk.js",
+    "main.js.map": "/Ais__Telegram-clone/static/js/main.5818a1d1.chunk.js.map",
+    "runtime-main.js": "/Ais__Telegram-clone/static/js/runtime-main.ec28c9b3.js",
+    "runtime-main.js.map": "/Ais__Telegram-clone/static/js/runtime-main.ec28c9b3.js.map",
+    "static/js/2.ea085158.chunk.js": "/Ais__Telegram-clone/static/js/2.ea085158.chunk.js",
+    "static/js/2.ea085158.chunk.js.map": "/Ais__Telegram-clone/static/js/2.ea085158.chunk.js.map",
+    "index.html": "/Ais__Telegram-clone/index.html",
+    "precache-manifest.5238641a14350ff3e31b171d509aa9d1.js": "/Ais__Telegram-clone/precache-manifest.5238641a14350ff3e31b171d509aa9d1.js",
+    "service-worker.js": "/Ais__Telegram-clone/service-worker.js",
+    "static/css/main.efc50f3e.chunk.css.map": "/Ais__Telegram-clone/static/css/main.efc50f3e.chunk.css.map",
+    "static/js/2.ea085158.chunk.js.LICENSE.txt": "/Ais__Telegram-clone/static/js/2.ea085158.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/Ais__Telegram-clone/static/media/backgrounForTelegram.2fc33436.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ec28c9b3.js",
+    "static/js/2.ea085158.chunk.js",
+    "static/css/main.efc50f3e.chunk.css",
+    "static/js/main.5818a1d1.chunk.js"
+  ]
+}
