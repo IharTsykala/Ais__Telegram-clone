@@ -1,16 +1,11 @@
 import React from "react"
 import { connect } from "react-redux"
-import { InputBase, Typography } from "@material-ui/core"
+import { Typography } from "@material-ui/core"
 import { UserInterface } from "../../../Redux/InterfacesEntity/User.Interface"
 import { MessageInterface } from "../../../Redux/InterfacesEntity/Message.Interface"
-import SearchIcon from "@material-ui/icons/Search"
-import ChromeReaderModeIcon from "@material-ui/icons/ChromeReaderMode"
-import MoreVertIcon from "@material-ui/icons/MoreVert"
-import MessageCard from "../../../Components/MessageCard/MessageCard"
-import AttachFileIcon from "@material-ui/icons/AttachFile"
-import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon"
-import MicNoneIcon from "@material-ui/icons/MicNone"
-import PhotoCameraIcon from "@material-ui/icons/PhotoCamera"
+import HeaderWindowDialog from "./HeaderWindowDialog/HeaderWindowDialog"
+import MainWindowDialog from "./MainWindowDialog/MainWindowDialog"
+import MessageField from "./MessageField/MessageField"
 
 type WindowDialogBlockProps = {
   idCurrentUser: number,
@@ -23,66 +18,23 @@ const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
   idCurrentUser,
   arrayFriends,
   arrayMessages,
+  dispatch,
 }) => {
   return (
     <div className={"window-dialog-block"}>
       {(idCurrentUser && (
         <div className={"window-dialog-block__current-dialog-information"}>
-          <div className={"window-dialog-block__header"}>
-            <div className={"window-dialog-block__header-information"}>
-              <Typography
-                variant={"caption"}
-                className={"window-dialog-block__header-information-name"}
-              >
-                {`${arrayFriends[idCurrentUser - 1].name}${
-                  arrayFriends[idCurrentUser - 1].id
-                }`}
-              </Typography>
-              <Typography
-                variant={"caption"}
-                className={"window-dialog-block__header-information-members"}
-              >
-                2 members
-              </Typography>
-            </div>
-            <div className={"window-dialog-block__header-menu"}>
-              <SearchIcon />
-              <ChromeReaderModeIcon />
-              <MoreVertIcon />
-            </div>
-          </div>
-          <div className={"window-dialog-block__main"}>
-            {arrayMessages.length &&
-              arrayMessages[idCurrentUser - 1].length &&
-              arrayMessages[idCurrentUser - 1].map((item: MessageInterface) => (
-                <MessageCard
-                  key={item.id}
-                  idCurrentUser={idCurrentUser}
-                  friend={arrayFriends[idCurrentUser - 1]}
-                  message={item}
-                />
-              ))}
-          </div>
-          <div className={"window-dialog-block__message-field"}>
-            <div className={"attach-file"}>
-              <AttachFileIcon titleAccess={"Send file"} />
-            </div>
-            <InputBase
-              placeholder={"Write a message..."}
-              className={"message-input"}
-            />
-            <div className={"additional-message-block"}>
-              <div className={"smiles"}>
-                <InsertEmoticonIcon titleAccess={"Smiles"} />
-              </div>
-              <div className={"void-message"}>
-                <MicNoneIcon titleAccess={"Record a message"} />
-              </div>
-              <div className={"video-message"}>
-                <PhotoCameraIcon titleAccess={"Send Media"} />
-              </div>
-            </div>
-          </div>
+          <HeaderWindowDialog
+            idCurrentUser={idCurrentUser}
+            arrayFriends={arrayFriends}
+          />
+          <MainWindowDialog
+            idCurrentUser={idCurrentUser}
+            arrayFriends={arrayFriends}
+            arrayMessages={arrayMessages}
+            dispatch={dispatch}
+          />
+          <MessageField />
         </div>
       )) || (
         <div className={"window-dialog-block__start-window"}>
