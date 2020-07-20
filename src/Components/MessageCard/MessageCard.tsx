@@ -20,6 +20,17 @@ const MessageCard: React.FunctionComponent<MessageCardProps> = ({
   message,
   dispatch,
 }) => {
+  let typeAdditionalMessage
+  let additionalMessage
+  for (let key of Object.keys(message.additional)) {
+    // @ts-ignore
+    if (message.additional[key]) {
+      typeAdditionalMessage = key
+      // @ts-ignore
+      additionalMessage = message.additional[key]
+      break
+    }
+  }
   return (
     <div className={"message-card"}>
       <div className={"message-card__header"}>
@@ -30,7 +41,7 @@ const MessageCard: React.FunctionComponent<MessageCardProps> = ({
           {`${friend.name}${message.idOwner}`}
         </Typography>
         <Typography
-          variant={"subtitle1"}
+          variant={"subtitle2"}
           className={"message-card__header-reply"}
           onClick={() => {
             dispatch(setCurrentMessage(message.id))
@@ -41,7 +52,21 @@ const MessageCard: React.FunctionComponent<MessageCardProps> = ({
         </Typography>
       </div>
       <div className={"message-card__main"}>
-        <Typography variant={"body2"} className={"message-card__main"}>
+        <div className={"message-card__main-additional"}>
+          <Typography
+            variant={"caption"}
+            className={"message-card__main-additional-title"}
+          >
+            {typeAdditionalMessage}
+          </Typography>
+          <Typography
+            variant={"caption"}
+            className={"message-card__main-additional-entity"}
+          >
+            {additionalMessage}
+          </Typography>
+        </div>
+        <Typography variant={"body2"} className={"message-card__main-text"}>
           {message.text}
         </Typography>
       </div>

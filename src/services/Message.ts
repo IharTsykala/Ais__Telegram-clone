@@ -16,6 +16,12 @@ const arrayMessages = [
     {
       id: 1,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 1,
       idOwner: 1,
       createDate: newDate(),
@@ -23,6 +29,12 @@ const arrayMessages = [
     {
       id: 21,
       text: "message2",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "quoted text",
+      },
       idDialog: 1,
       idOwner: 1,
       createDate: newDate(),
@@ -32,6 +44,12 @@ const arrayMessages = [
     {
       id: 2,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "new link",
+        quotedText: "",
+      },
       idDialog: 2,
       idOwner: 2,
       createDate: newDate(),
@@ -41,6 +59,12 @@ const arrayMessages = [
     {
       id: 3,
       text: "message",
+      additional: {
+        video: "",
+        audio: "new audio",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 3,
       idOwner: 3,
       createDate: newDate(),
@@ -50,6 +74,12 @@ const arrayMessages = [
     {
       id: 4,
       text: "message",
+      additional: {
+        video: "new video",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 4,
       idOwner: 4,
       createDate: newDate(),
@@ -59,6 +89,12 @@ const arrayMessages = [
     {
       id: 5,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "quoted text",
+      },
       idDialog: 5,
       idOwner: 5,
       createDate: newDate(),
@@ -68,6 +104,12 @@ const arrayMessages = [
     {
       id: 6,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 6,
       idOwner: 6,
       createDate: newDate(),
@@ -77,6 +119,12 @@ const arrayMessages = [
     {
       id: 7,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 7,
       idOwner: 7,
       createDate: newDate(),
@@ -86,6 +134,12 @@ const arrayMessages = [
     {
       id: 8,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 8,
       idOwner: 8,
       createDate: newDate(),
@@ -95,6 +149,12 @@ const arrayMessages = [
     {
       id: 9,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 9,
       idOwner: 9,
       createDate: newDate(),
@@ -104,6 +164,12 @@ const arrayMessages = [
     {
       id: 10,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 10,
       idOwner: 10,
       createDate: newDate(),
@@ -113,6 +179,12 @@ const arrayMessages = [
     {
       id: 11,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 11,
       idOwner: 11,
       createDate: newDate(),
@@ -122,6 +194,12 @@ const arrayMessages = [
     {
       id: 12,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 12,
       idOwner: 12,
       createDate: newDate(),
@@ -131,6 +209,12 @@ const arrayMessages = [
     {
       id: 13,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 13,
       idOwner: 13,
       createDate: newDate(),
@@ -140,6 +224,12 @@ const arrayMessages = [
     {
       id: 14,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 14,
       idOwner: 14,
       createDate: newDate(),
@@ -149,6 +239,12 @@ const arrayMessages = [
     {
       id: 15,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 15,
       idOwner: 15,
       createDate: newDate(),
@@ -158,6 +254,12 @@ const arrayMessages = [
     {
       id: 16,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 16,
       idOwner: 16,
       createDate: newDate(),
@@ -167,6 +269,12 @@ const arrayMessages = [
     {
       id: 17,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 17,
       idOwner: 17,
       createDate: newDate(),
@@ -176,6 +284,12 @@ const arrayMessages = [
     {
       id: 18,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 18,
       idOwner: 18,
       createDate: newDate(),
@@ -185,6 +299,12 @@ const arrayMessages = [
     {
       id: 19,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 19,
       idOwner: 19,
       createDate: newDate(),
@@ -194,6 +314,12 @@ const arrayMessages = [
     {
       id: 20,
       text: "message",
+      additional: {
+        video: "",
+        audio: "",
+        link: "",
+        quotedText: "",
+      },
       idDialog: 20,
       idOwner: 20,
       createDate: newDate(),

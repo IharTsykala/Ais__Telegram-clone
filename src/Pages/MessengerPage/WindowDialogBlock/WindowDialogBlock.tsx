@@ -27,7 +27,6 @@ const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
   currentMessage,
   dispatch,
 }) => {
-  console.log(currentMessage)
   return (
     <div className={"window-dialog-block"}>
       {(idCurrentUser && (
