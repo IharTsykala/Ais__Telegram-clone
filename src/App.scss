@@ -191,7 +191,7 @@ body {
     }
     .window-dialog-block__message-field {
       @extend %messenger-page-header;
-      grid-template-columns: 50px 1fr repeat(2, 50px);
+      grid-template-columns: 50px 1fr 120px;
       justify-items: center;
       align-items: center;
       border-left: 1px solid $middleBackground;
@@ -202,6 +202,12 @@ body {
       }
       svg{
         cursor: pointer;
+      }
+      .additional-message-block {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
       }
     }
   }
