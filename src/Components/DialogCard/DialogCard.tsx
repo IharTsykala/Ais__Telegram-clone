@@ -5,6 +5,7 @@ import patternAvatar from "../../assets/img/pattern-avatar.jpg"
 import { UserInterface } from "../../Redux/InterfacesEntity/User.Interface"
 import { MessageInterface } from "../../Redux/InterfacesEntity/Message.Interface"
 import { setCurrentDialog } from "../../Redux/store/Dialog/Dialog.actions"
+import { setCurrentMessage } from "../../Redux/store/Message/Message.actions"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -42,7 +43,10 @@ const DialogCard: React.FunctionComponent<UserCardProps> = ({
           `user-card ${classes.root} user-card_current`) ||
         `user-card ${classes.root}`
       }
-      onClick={() => dispatch(setCurrentDialog(user.id))}
+      onClick={() => {
+        dispatch(setCurrentDialog(user.id))
+        dispatch(setCurrentMessage(0))
+      }}
     >
       <div className={"user-card__avatar-container"}>
         <Avatar alt="avatar" src={patternAvatar} className={classes.avatar} />

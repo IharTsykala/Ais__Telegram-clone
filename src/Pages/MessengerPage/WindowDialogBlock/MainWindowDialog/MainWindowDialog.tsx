@@ -26,6 +26,7 @@ const MainWindowDialog: React.FunctionComponent<MainWindowDialogProps> = ({
             idCurrentUser={idCurrentUser}
             friend={arrayFriends[idCurrentUser - 1]}
             message={item}
+            dispatch={dispatch}
           />
         ))}
     </div>

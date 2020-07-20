@@ -10,6 +10,8 @@ $darkColor: #323232;
 
 $headerHeight: 50px;
 
+$iconWidth: 50px;
+
 %messenger-page-header {
   display: grid;
   color: $lightColor;
@@ -111,9 +113,10 @@ body {
 }
 
 .window-dialog-block {
-  background-image:url('./assets/img/backgrounForTelegram.jpg');
-  background-size:cover;
+  background-image: url('./assets/img/backgrounForTelegram.jpg');
+  background-size: cover;
   display: grid;
+
   .window-dialog-block__start-window {
     height: 30px;
     width: 300px;
@@ -127,6 +130,7 @@ body {
       width: 100%;
       background-color: inherit;
     }
+
     .text-select-chat {
       display: grid;
       align-items: center;
@@ -141,41 +145,46 @@ body {
     align-content: center;
   }
 
-  .window-dialog-block__current-dialog-information {
-    display: grid;
-    grid-template-rows: $headerHeight 1fr $headerHeight;
+  %window-dialog-block__current-dialog-information_common {
     .window-dialog-block__header {
       padding: 0 0 0 20px;
       border-left: 1px solid $middleBackground;
       border-bottom: 1px solid $middleBackground;
       @extend %messenger-page-header;
-      grid-template-columns: 1fr 120px;
+      grid-template-columns: 1fr $iconWidth*3;
+
       .window-dialog-block__header-information {
         height: 100%;
         display: grid;
-        grid-template-rows: 25px 24px;        ;
+        grid-template-rows: 25px 24px;
+
         .window-dialog-block__header-information-name {
           @extend %header-window-dialog-block__header-information_common;
           color: $darkColor;
           font-weight: bold;
         }
+
         .window-dialog-block__header-information-members {
           @extend %header-window-dialog-block__header-information_common;
         }
       }
+
       .window-dialog-block__header-menu {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         align-items: center;
+
         svg {
           cursor: pointer;
         }
       }
     }
+
     .window-dialog-block__main {
       overflow-x: hidden;
       overflow-y: auto;
+
       .message-card {
         display: block;
         min-width: 200px;
@@ -187,26 +196,92 @@ body {
         text-align: left;
         padding: 10px;
         margin: 20px;
+        .message-card__header {
+          display: grid;
+          grid-template-columns: 1fr $iconWidth;
+          .message-card__header-reply {
+            justify-self: end;
+            color: $lightColor;
+            display: none;
+          }
+        }
+        &:hover {
+          .message-card__header-reply {
+            display: grid;
+            cursor: pointer;
+          }
+        }
+        .message-card__header-text {
+
+        }
       }
     }
+
     .window-dialog-block__message-field {
       @extend %messenger-page-header;
-      grid-template-columns: 50px 1fr 120px;
+      grid-template-columns: $iconWidth 1fr $iconWidth*3;
       justify-items: center;
       align-items: center;
       border-left: 1px solid $middleBackground;
       border-top: 1px solid $middleBackground;
+
       .message-input {
         width: 100%;
         justify-self: start;
       }
-      svg{
+
+      svg {
         cursor: pointer;
       }
+
       .additional-message-block {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+      }
+    }
+  }
+
+  .window-dialog-block__current-dialog-information {
+    display: grid;
+    grid-template-rows: $headerHeight 1fr $headerHeight;
+    @extend  %window-dialog-block__current-dialog-information_common;
+  }
+
+  .window-dialog-block__current-dialog-information_reply {
+    display: grid;
+    grid-template-rows: $headerHeight 1fr $headerHeight $headerHeight;
+    @extend  %window-dialog-block__current-dialog-information_common;
+    .window-dialog-block__reply {
+      background-color: $lightBackground;
+      display: grid;
+      grid-template-columns: $iconWidth 1fr $iconWidth;
+      align-items: center;
+      svg {
+        justify-self: center;
+        cursor: pointer;
+      }
+      %reply-message {
+        line-height: inherit;
+        display: grid;
+        align-items: center;
+      }
+
+      .window-dialog-block__reply-message {
+        display: grid;
+        grid-template-rows: repeat(2, 25px);
+        .window-dialog-block__reply-message-name {
+          @extend %reply-message;
+          font-weight: bold;
+        }
+        .window-dialog-block__reply-message-text {
+          @extend %reply-message
+        }
+      }
+      .window-dialog-block__reply-close {
+        display: grid;
+        align-items: center;
         justify-items: center;
       }
     }
