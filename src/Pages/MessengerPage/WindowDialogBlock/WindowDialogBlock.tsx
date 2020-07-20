@@ -30,7 +30,7 @@ const WindowDialogBlock: React.FunctionComponent<WindowDialogBlockProps> = ({
           <div className={"window-dialog-block__header"}>
             <div className={"window-dialog-block__header-information"}>
               <Typography
-                variant={"subtitle1"}
+                variant={"caption"}
                 className={"window-dialog-block__header-information-name"}
               >
                 {`${arrayFriends[idCurrentUser - 1].name}${

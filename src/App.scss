@@ -133,6 +133,14 @@ body {
       color: $lightColor;
     }
   }
+
+  %header-window-dialog-block__header-information_common {
+    height: 100%;
+    line-height: inherit;
+    display: grid;
+    align-content: center;
+  }
+
   .window-dialog-block__current-dialog-information {
     display: grid;
     grid-template-rows: $headerHeight 1fr $headerHeight;
@@ -143,11 +151,16 @@ body {
       @extend %messenger-page-header;
       grid-template-columns: 1fr 120px;
       .window-dialog-block__header-information {
-        align-self: center;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 25px 24px;        ;
         .window-dialog-block__header-information-name {
+          @extend %header-window-dialog-block__header-information_common;
           color: $darkColor;
+          font-weight: bold;
         }
         .window-dialog-block__header-information-members {
+          @extend %header-window-dialog-block__header-information_common;
         }
       }
       .window-dialog-block__header-menu {
