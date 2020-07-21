@@ -1,27 +1,11 @@
 import React from "react"
 import { InputBase } from "@material-ui/core"
-import { UserInterface } from "../../../../Redux/InterfacesEntity/User.Interface"
-import { MessageInterface } from "../../../../Redux/InterfacesEntity/Message.Interface"
 import AttachFileIcon from "@material-ui/icons/AttachFile"
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon"
 import MicNoneIcon from "@material-ui/icons/MicNone"
 import PhotoCameraIcon from "@material-ui/icons/PhotoCamera"
 
-type MessageFieldWindowDialogProps = {
-  // idCurrentUser: number,
-  // arrayFriends: UserInterface[],
-  // arrayMessages: MessageInterface[][],
-  // dispatch: any,
-}
-
-const MessageField: React.FunctionComponent<MessageFieldWindowDialogProps> = (
-  {
-    // idCurrentUser,
-    // arrayFriends,
-    // arrayMessages,
-    // dispatch,
-  }
-) => {
+const MessageField: React.FunctionComponent = () => {
   return (
     <div className={"window-dialog-block__message-field"}>
       <div className={"attach-file"}>
