@@ -47,7 +47,7 @@ const arrayMessages = [
       additional: {
         video: "",
         audio: "",
-        link: "new link",
+        link: "https://www.youtube.com/watch?v=nhaBzLqp3OU",
         quotedText: "",
       },
       idDialog: 2,
@@ -61,7 +61,7 @@ const arrayMessages = [
       text: "message",
       additional: {
         video: "",
-        audio: "new audio",
+        audio: "../assets/audio/avtobus_variant_5.mp3",
         link: "",
         quotedText: "",
       },
@@ -75,7 +75,8 @@ const arrayMessages = [
       id: 4,
       text: "message",
       additional: {
-        video: "new video",
+        video:
+          "https://vod-progressive.akamaized.net/exp=1595307476~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F755%2F16%2F403777679%2F1727192427.mp4~hmac=9b7ee9616b0c74552c8420a955240fad37b7db616e466a49a27fcac52ed37c44/vimeo-prod-skyfire-std-us/01/755/16/403777679/1727192427.mp4?filename=Macro+-+34855.mp4",
         audio: "",
         link: "",
         quotedText: "",

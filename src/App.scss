@@ -212,10 +212,14 @@ body {
         .message-card__main {
           .message-card__main-additional {
             display: grid;
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: auto 1fr;
             border-left: 3px solid $middleBackground;
+            padding-left: 5px;
             .message-card__main-additional-title {
               font-weight: bold;
+            }
+            .message-card__main-additional-entity {
+              width: 600px;
             }
           }
           .message-card__main-text {

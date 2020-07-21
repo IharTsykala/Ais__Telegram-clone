@@ -59,12 +59,33 @@ const MessageCard: React.FunctionComponent<MessageCardProps> = ({
           >
             {typeAdditionalMessage}
           </Typography>
-          <Typography
-            variant={"caption"}
-            className={"message-card__main-additional-entity"}
-          >
-            {additionalMessage}
-          </Typography>
+          {typeAdditionalMessage === "audio" && (
+            <audio title={"my audio"} controls>
+              <source src={message.additional.audio} />
+            </audio>
+          )}
+          {typeAdditionalMessage === "video" && (
+            <video
+              title={"my video"}
+              controls
+              className={"message-card__main-additional-entity"}
+            >
+              <source src={message.additional.video} />
+            </video>
+          )}
+          {typeAdditionalMessage === "link" && (
+            <a href={message.additional.link} title={"new link"}>
+              new link{" "}
+            </a>
+          )}
+          {typeAdditionalMessage === "quotedText" && (
+            <Typography
+              variant={"caption"}
+              className={"message-card__main-additional-entity"}
+            >
+              {additionalMessage}
+            </Typography>
+          )}
         </div>
         <Typography variant={"body2"} className={"message-card__main-text"}>
           {message.text}
