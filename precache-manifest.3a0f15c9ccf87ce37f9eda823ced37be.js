@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "838e92093a965f4db5c6e03eb0ea3244",
+    "revision": "c44d4bc554328588644d619ac553744e",
     "url": "/Ais__Telegram-clone/index.html"
   },
   {
-    "revision": "af93ac318f53199b3a01",
-    "url": "/Ais__Telegram-clone/static/css/main.70dc1183.chunk.css"
+    "revision": "15c2b3723b3f08cc64ae",
+    "url": "/Ais__Telegram-clone/static/css/main.ae8829d4.chunk.css"
   },
   {
-    "revision": "6f314318a2a3dacb1baf",
-    "url": "/Ais__Telegram-clone/static/js/2.ea085158.chunk.js"
+    "revision": "dd3ac208cc25487b802f",
+    "url": "/Ais__Telegram-clone/static/js/2.e042c88b.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/Ais__Telegram-clone/static/js/2.ea085158.chunk.js.LICENSE.txt"
+    "url": "/Ais__Telegram-clone/static/js/2.e042c88b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "af93ac318f53199b3a01",
-    "url": "/Ais__Telegram-clone/static/js/main.5818a1d1.chunk.js"
+    "revision": "15c2b3723b3f08cc64ae",
+    "url": "/Ais__Telegram-clone/static/js/main.88362fcc.chunk.js"
   },
   {
     "revision": "4dd08d48d361365f2e8a",

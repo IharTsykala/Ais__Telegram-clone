@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Ais__Telegram-clone/precache-manifest.811593879a8986c239ac92e42e88482e.js"
+  "/Ais__Telegram-clone/precache-manifest.3a0f15c9ccf87ce37f9eda823ced37be.js"
 );
 
 self.addEventListener('message', (event) => {
